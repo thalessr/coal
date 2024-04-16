@@ -3,6 +3,7 @@ require 'active_support/concern'
 require 'active_support/deprecation'
 require 'active_support/core_ext'
 require 'faraday'
+require 'faraday/httpclient'
 require 'faraday_middleware'
 require 'mime-types'
 

@@ -4,6 +4,7 @@ PATH
     locomotivecms_coal (1.8.0.alpha1)
       activesupport (>= 7.1)
       faraday (~> 1.0)
+      faraday-httpclient (~> 1.0.1)
       faraday_middleware (~> 1.2)
       httpclient (~> 2.8)
       mime-types (~> 3.5)
@@ -135,6 +136,7 @@ GEM
       hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-22
 
 DEPENDENCIES

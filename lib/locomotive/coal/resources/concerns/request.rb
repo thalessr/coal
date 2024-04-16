@@ -51,6 +51,7 @@ module Locomotive::Coal::Resources
         if response.success?
           raw ? response : response.body
         else
+          puts "\n ERROR => response: #{response}\n\n"
           raise Locomotive::Coal::Error.from_response(response)
         end
       end
@@ -74,7 +75,10 @@ module Locomotive::Coal::Resources
           if %i(post put).include?(action)
             request.body = _encode_parameters(parameters)
           else
+            request.options.open_timeout = 1_800
+            request.options.timeout = 1_800
             request.params = parameters
+
           end
         end
       end
